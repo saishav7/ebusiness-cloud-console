@@ -19,4 +19,7 @@
 //= require morris-demo
 //= require siminta
 //= require dashboard-demo
-//=require dashboard
+//= require dashboard
+//= require pace
+//= require morris
+//= require raphael-2.1.0.min
