@@ -15,5 +15,6 @@ class ListCompaniesController < ApplicationController
    @id3 = res[2]["company_id"]
    @name3 = res[2]["company_name"]
    @status3 = res[2]["company_status_id"]
+   @status4 = res[2]["company_status_id"]
   end
 end
