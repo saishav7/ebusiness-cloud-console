@@ -2,7 +2,7 @@ require 'pg'
 class ListCompaniesController < ApplicationController
   def viewCompanyList
   
-   conn = PGconn.open(:dbname => 'EBDX')
+   conn = PGconn.open(:dbname => 'd1vipi0k7m9cnu')
    res = conn.exec('SELECT * FROM Company')
    @id1 = res[0]["company_id"]
    @name1 = res[0]["company_name"]
