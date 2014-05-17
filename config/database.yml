@@ -60,3 +60,4 @@ production:
   pool: 5
   username: postgres
   password: pg123
+  host: localhost
