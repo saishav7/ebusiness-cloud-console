@@ -274,20 +274,21 @@
 	                                    </thead>
 	                                    <tbody>
 	                                        <tr>
-	                                            <td><%= @id1 %></td>
-	                                            <td><%= @name1 %></td>
-	                                            <td><%= @status1 %></td>
+	                                            <td><%= @company_table[0].company_id %></td>
+	                                            <td><%= @company_table[0].company_name %></td>
+                                                <td><%= @company_table[0].company_status_id %></td>   
 	                                        </tr>
-	                                        <tr>
-	                                            <td><%= @id2 %></td>
-	                                            <td><%= @name2 %></td>
-	                                            <td><%= @status2 %></td>
-	                                        </tr>
-	                                        <tr>
-	                                            <td><%= @id3 %></td>
-	                                            <td><%= @name3 %></td>
-	                                            <td><%= @status3 %></td>
-	                                        </tr>
+                                            <tr>
+                                                <td><%= @company_table[1].company_id %></td>
+                                                <td><%= @company_table[1].company_name %></td>
+                                                <td><%= @company_table[1].company_status_id %></td>   
+                                            </tr>
+                                            <tr>
+                                                <td><%= @company_table[2].company_id %></td>
+                                                <td><%= @company_table[2].company_name %></td>
+                                                <td><%= @company_table[2].company_status_id %></td>   
+                                            </tr>
+	                                       
 	                                    </tbody>
 	                                </table>
 	                            </div>

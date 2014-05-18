@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'sprockets_better_errors'
 
+gem 'rmre', '~> 0.0.8'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
