@@ -30,7 +30,7 @@
 	    <!--Table-->
 	            <div class="panel panel-primary">
 	                <div class="panel-heading">
-	                    <i class="fa fa-bar-chart-o fa-fw"></i>Company Status
+	                    <i class="fa fa-bar-chart-o fa-fw"></i>Business Process
 	                </div>
 
 	                <div class="panel-body">
@@ -40,15 +40,23 @@
 	                                <table class="table table-bordered table-hover table-striped">
 	                                    <thead>
 	                                        <tr>
-	                                            <th>Id</th>
-	                                            <th>Label</th>
+	                                            <th>BP Id</th>
+	                                            <th>BP Name</th>
+	                                            <th>BP Buyer Authority</th>
+	                                            <th>BP Buyer Authority Version</th>
+	                                            <th>BP Supplier Authority</th>
+	                                            <th>BP Supplier Authority Version</th>
 	                                        </tr>
 	                                    </thead>
 	                                    <tbody>
-	                                    	<% @company_status_table.each do |company_status| %>
+	                                    	<% @business_process_table.each do |bp| %>
 	                                        <tr>
-	                                            <td><%= company_status.status_id %></td>
-	                                            <td><%= company_status.status_label %></td>
+	                                            <td><%= bp.bp_id %></td>
+	                                            <td><%= bp.bp_name %></td>
+                                                <td><%= bp.bp_buyer_authority %></td> 
+                                                <td><%= bp.bp_buyer_authority_version %></td>
+	                                            <td><%= bp.bp_supplier_authority %></td>
+                                                <td><%= bp.bp_supplier_authority_version %></td> 
 	                                        </tr>	
 	                                        <% end %>                                       
 	                                    </tbody>
@@ -59,15 +67,27 @@
 	                            </div>
 	                            <br>
 	                             <div id="viewEntryFields" style="display:none;" class="table-responsive">
-	                             	<form role="form" action="createNewCompanyStatus">
+	                             	<form role="form" action="createNewBusinessProcess">
 		                                <table class="table table-bordered table-hover table-striped">
 		                                    <tbody>
 		                                        <tr>
 		                                            <td>
-	                                            		<input id="statusId" name="statusId" class="form-control" placeholder="Enter id">
+	                                            		<input id="bpId" name="bpId" class="form-control" placeholder="Enter BP Id">
 	                                        		</td>
-		                                            <td>
-	                                            		<input id="statusLabel" name="statusLabel" class="form-control" placeholder="Enter Label">
+	                                        		<td>
+	                                            		<input id="bpName" name="bpName" class="form-control" placeholder="Enter BP Name">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="bpBuyerAuthority" name="bpBuyerAuthority" class="form-control" placeholder="Enter BP Buyer Authority">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="bpBuyerAuthorityVersion" name="bpBuyerAuthorityVersion" class="form-control" placeholder="Enter BP Buyer Authority Version">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="bpSupplierAuthority" name="bpSupplierAuthority" class="form-control" placeholder="Enter BP Supplier Authority">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="bpSupplierAuthorityVersion" name="bpSupplierAuthorityVersion" class="form-control" placeholder="Enter BP Supplier Authority Version">
 	                                        		</td>
 		                                        </tr>	                                    
 		                                    </tbody>

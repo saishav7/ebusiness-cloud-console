@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tables</title>
+    <!-- Core CSS - Include with every page -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	 <script>
+	  $(document).ready(function(){
+	  $("#addEntry").click(function () {
+	  	document.getElementById('viewEntryFields').style.display = "block";
+});
+});
+  </script>
+   </head>
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tables</h1>
+                </div>
+                <!--End Page Header -->
+            </div>
+	    <!--Table-->
+	            <div class="panel panel-primary">
+	                <div class="panel-heading">
+	                    <i class="fa fa-bar-chart-o fa-fw"></i>Entity Relationship
+	                </div>
+
+	                <div class="panel-body">
+	                    <div class="row">
+	                        <div class="col-lg-12">
+	                            <div class="table-responsive">
+	                                <table class="table table-bordered table-hover table-striped">
+	                                    <thead>
+	                                        <tr>
+	                                            <th>Relation Id</th>
+	                                            <th>External Buyer Entity Id</th>
+	                                            <th>Local Supplier Entity Id</th>
+	                                            <th>Local Entity Integercode Id</th>
+	                                            <th>Local Entity Edicode Id</th>
+	                                            <th>External Entity Integercode Id</th>
+	                                            <th>External Entity Edicode Id</th>
+	                                            <th>Relation Status Id</th>
+	                                            <th>Relation BP Id</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                    	<% @entity_relationship_table.each do |er| %>
+	                                        <tr>
+	                                            <td><%= er.relation_id %></td>
+	                                            <td><%= er.extbuy_entity_id %></td>
+                                                <td><%= er.locsupl_entity_id %></td>
+                                                <td><%= er.loc_entity_integercode_id %></td>
+	                                            <td><%= er.loc_entity_edicode_id %></td>
+                                                <td><%= er.ext_entity_integercode_id %></td>
+                                                <td><%= er.ext_entity_edicode_id %></td>
+	                                            <td><%= er.relation_status_id %></td>
+                                                <td><%= er.relation_bp_id %></td>   
+	                                        </tr>	
+	                                        <% end %>                                       
+	                                    </tbody>
+	                                </table>
+	                            </div>
+	                            <div>
+	                             	<button id="addEntry" type="button" class="btn btn-primary">Add New Entry</button>
+	                            </div>
+	                            <br>
+	                             <div id="viewEntryFields" style="display:none;" class="table-responsive">
+	                             	<form role="form" action="createNewEntityRelationship">
+		                                <table class="table table-bordered table-hover table-striped">
+		                                    <tbody>
+		                                        <tr>
+		                                            <td>
+	                                            		<input id="relationId" name="relationId" class="form-control" placeholder="Enter Relation Id">
+	                                        		</td>
+		                                             <td>
+	                                            		<input id="extbuyEntityId" name="extbuyEntityId" class="form-control" placeholder="Enter External Buyer Entity Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="locsuplEntityId" name="locsuplEntityId" class="form-control" placeholder="Enter Local Supplier Entity Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="locEntityIntegercodeId" name="locEntityIntegercodeId" class="form-control" placeholder="Enter Local Entity Integercode Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="locEntityEdicodeId" name="locEntityEdicodeId" class="form-control" placeholder="Enter Local Entity Edicode Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="extEntityIntegercodeId" name="extEntityIntegercodeId" class="form-control" placeholder="Enter External Entity Integercode Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="extEntityEdicodeId" name="extEntityEdicodeId" class="form-control" placeholder="Enter External Entity Edicode Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="relationStatusId" name="relationStatusId" class="form-control" placeholder="Enter Relation Status Id">
+	                                        		</td>
+	                                        		 <td>
+	                                            		<input id="relationBpId" name="relationBpId" class="form-control" placeholder="Enter Relation BP Id">
+	                                        		</td>
+		                                        </tr>	                                    
+		                                    </tbody>
+		                                </table>
+		                                <input id="saveEntry" value="Save" type="Submit" class="btn btn-success"></input>
+	                            	</form>
+	                            </div>
+	                            
+
+	                        </div>
+
+	                    </div>
+	                    <!-- /.row -->
+	                </div>
+	                <!-- /.panel-body -->
+	            </div>
+	            <!--End of Table-->
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+</body>
+
+</html>

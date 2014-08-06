@@ -80,22 +80,22 @@ class TablesController < ApplicationController
   def createNewMessageType
 
     @message_type = MessageType.new
-    @message_type.msgtype_id
-    @message_type.msgtype_status_id
-    @message_type.msgtype_name
-    @message_type.msgtype_in_role
-    @message_type.msgtype_out_role
-    @message_type.msgtype_sbdh_header_ver
-    @message_type.msgtype_sbdh_docid_type_ver
-    @message_type.msgtype_sbdh_docid_type
-    @message_type.msgtype_sbdh_docid_multi_type
-    @message_type.msgtype_bizscope_type
-    @message_type.msgtype_bizscope_id
-    @message_type.msgtype_bizscope_instance_id
-    @message_type.msgtype_trans_cmd_dch_type
-    @message_type.msgtype_compliance_map
-    @message_type.msgtype_pre_compliance_map
-    @message_type.msgtype_post_compliance_map
+    @message_type.msgtype_id = params[:msgtypeId]
+    @message_type.msgtype_status_id = params[:msgtypeStatusId]
+    @message_type.msgtype_name = params[:msgtypeName]
+    @message_type.msgtype_in_role = params[:msgtypeInRole]
+    @message_type.msgtype_out_role = params[:msgtypeOutRole]
+    @message_type.msgtype_sbdh_header_ver = params[:msgtypeSbdhHeaderVer]
+    @message_type.msgtype_sbdh_docid_type_ver = params[:msgtypeSbdhDocidTypeVer]
+    @message_type.msgtype_sbdh_docid_type = params[:msgtypeSbdhDocidType]
+    @message_type.msgtype_sbdh_docid_multi_type = params[:msgtypeSbdhDocidMultiType]
+    @message_type.msgtype_bizscope_type = params[:msgtypeBizscopeType]
+    @message_type.msgtype_bizscope_id = params[:msgtypeBizscopeId]
+    @message_type.msgtype_bizscope_instance_id = params[:msgtypeBizscopeInstanceId]
+    @message_type.msgtype_trans_cmd_dch_type = params[:msgtypeTransCmdDchType]
+    @message_type.msgtype_compliance_map = params[:msgtypeComplianceMap]
+    @message_type.msgtype_pre_compliance_map = params[:msgtypePreComplianceMap]
+    @message_type.msgtype_post_compliance_map = params[:msgtypePostComplianceMap]
     @message_type.save
 
     redirect_to :back
@@ -112,15 +112,16 @@ class TablesController < ApplicationController
   def createNewBusinessProcess
 
     @business_process = BusinessProcess.new
-    @business_process.bp_id
-    @business_process.bp_name
-    @business_process.bp_buyer_authority
-    @business_process.bp_buyer_authority_version
-    @business_process.bp_supplier_authority
-    @business_process.bp_supplier_authority_version
+    @business_process.bp_id = params[:bpId]
+    @business_process.bp_name = params[:bpName]
+    @business_process.bp_buyer_authority = params[:bpBuyerAuthority]
+    @business_process.bp_buyer_authority_version = params[:bpBuyerAuthorityVersion]
+    @business_process.bp_supplier_authority = params[:bpSupplierAuthority]
+    @business_process.bp_supplier_authority_version = params[:bpSupplierAuthorityVersion]
     @business_process.save
 
     redirect_to :back
+
   end
 
 
@@ -161,15 +162,15 @@ class TablesController < ApplicationController
   def createNewEntityRelationship
 
     @entity_relationship = EntityRelationship.new
-    @entity_relationship.relation_id
-    @entity_relationship.extbuy_entity_id
-    @entity_relationship.locsupl_entity_id
-    @entity_relationship.loc_entity_integercode_id
-    @entity_relationship.loc_entity_edicode_id
-    @entity_relationship.ext_entity_integercode_id
-    @entity_relationship.ext_entity_edicode_id
-    @entity_relationship.relation_status_id
-    @entity_relationship.relation_bp_id
+    @entity_relationship.relation_id = params[:relationId]
+    @entity_relationship.extbuy_entity_id = params[:extbuyEntityId]
+    @entity_relationship.locsupl_entity_id = params[:locsuplEntityId]
+    @entity_relationship.loc_entity_integercode_id = params[:locEntityIntegercodeId]
+    @entity_relationship.loc_entity_edicode_id = params[:locEntityEdicodeId]
+    @entity_relationship.ext_entity_integercode_id = params[:extEntityIntegercodeId]
+    @entity_relationship.ext_entity_edicode_id = params[:extEntityEdicodeId]
+    @entity_relationship.relation_status_id = params[:relationStatusId]
+    @entity_relationship.relation_bp_id = params[:relationBpId]
     @entity_relationship.save
 
     redirect_to :back
@@ -203,16 +204,16 @@ class TablesController < ApplicationController
   def createNewEdifactCode
 
     @edifact_code = EdifactCode.new
-    @edifact_code.code_id
-    @edifact_code.edifact_identifiant
-    @edifact_code.edifact_qualifiant
-    @edifact_code.edifact_routing_adrs
-    @edifact_code.edifact_syntax_level
-    @edifact_code.edifact_syntax_version
-    @edifact_code.edifact_una_seg
-    @edifact_code.edifact_una_seg_value
-    @edifact_code.edifact_test_indic
-    @edifact_code.partner_id
+    @edifact_code.code_id = params[:codeId]
+    @edifact_code.edifact_identifiant = params[:identifiant]
+    @edifact_code.edifact_qualifiant = params[:qualifiant] 
+    @edifact_code.edifact_routing_adrs = params[:routingAdrs]
+    @edifact_code.edifact_syntax_level = params[:syntaxLevel]
+    @edifact_code.edifact_syntax_version = params[:syntaxVersion]
+    @edifact_code.edifact_una_seg = params[:unaSeg]
+    @edifact_code.edifact_una_seg_value = params[:unaSegValue]
+    @edifact_code.edifact_test_indic = params[:testIndic]
+    @edifact_code.partner_id = params[:partnerId]
     @edifact_code.save
 
     redirect_to :back
@@ -248,12 +249,12 @@ class TablesController < ApplicationController
   def createNewSenderReceiverContact
 
     @sender_receiver_contact = SenderReceiverContact.new
-    @sender_receiver_contact.contact_id
-    @sender_receiver_contact.contact_gln
-    @sender_receiver_contact.contact_name
-    @sender_receiver_contact.contact_email
-    @sender_receiver_contact.contact_fax
-    @sender_receiver_contact.contact_phone
+    @sender_receiver_contact.contact_id = params[:contactId]
+    @sender_receiver_contact.contact_gln = params[:contactGln]
+    @sender_receiver_contact.contact_name = params[:contactName]
+    @sender_receiver_contact.contact_email = params[:contactEmail]
+    @sender_receiver_contact.contact_fax = params[:contactFax]
+    @sender_receiver_contact.contact_phone = params[:contactPhone]
     @sender_receiver_contact.save
 
     redirect_to :back

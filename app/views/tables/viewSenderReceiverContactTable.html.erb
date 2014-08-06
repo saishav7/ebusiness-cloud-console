@@ -30,7 +30,7 @@
 	    <!--Table-->
 	            <div class="panel panel-primary">
 	                <div class="panel-heading">
-	                    <i class="fa fa-bar-chart-o fa-fw"></i>Company Status
+	                    <i class="fa fa-bar-chart-o fa-fw"></i>Sender Receiver Contact
 	                </div>
 
 	                <div class="panel-body">
@@ -40,15 +40,23 @@
 	                                <table class="table table-bordered table-hover table-striped">
 	                                    <thead>
 	                                        <tr>
-	                                            <th>Id</th>
-	                                            <th>Label</th>
+	                                            <th>Contact Id</th>
+	                                            <th>Contact Gln</th>
+	                                            <th>Contact Name</th>
+	                                            <th>Contact Email</th>
+	                                            <th>Contact Fax</th>
+	                                            <th>Contact Phone</th>
 	                                        </tr>
 	                                    </thead>
 	                                    <tbody>
-	                                    	<% @company_status_table.each do |company_status| %>
+	                                    	<% @sender_receiver_contact_table.each do |contact| %>
 	                                        <tr>
-	                                            <td><%= company_status.status_id %></td>
-	                                            <td><%= company_status.status_label %></td>
+	                                            <td><%= contact.contact_id %></td>
+	                                            <td><%= contact.contact_gln %></td>
+                                                <td><%= contact.contact_name %></td>  
+                                                <td><%= contact.contact_email %></td>
+	                                            <td><%= contact.contact_fax %></td>
+                                                <td><%= contact.contact_phone %></td>  
 	                                        </tr>	
 	                                        <% end %>                                       
 	                                    </tbody>
@@ -59,16 +67,28 @@
 	                            </div>
 	                            <br>
 	                             <div id="viewEntryFields" style="display:none;" class="table-responsive">
-	                             	<form role="form" action="createNewCompanyStatus">
+	                             	<form role="form" action="createNewSenderReceiverContact">
 		                                <table class="table table-bordered table-hover table-striped">
 		                                    <tbody>
 		                                        <tr>
 		                                            <td>
-	                                            		<input id="statusId" name="statusId" class="form-control" placeholder="Enter id">
+	                                            		<input id="contactId" name="contactId" class="form-control" placeholder="Enter Id">
 	                                        		</td>
 		                                            <td>
-	                                            		<input id="statusLabel" name="statusLabel" class="form-control" placeholder="Enter Label">
+	                                            		<input id="contactGln" name="contactGln" class="form-control" placeholder="Enter Gln">
 	                                        		</td>
+	                                                <td>
+	                                            		<input id="contactName" name="contactName" class="form-control" placeholder="Enter Name">
+	                                            	</td>
+	                                            	<td>
+	                                            		<input id="contactEmail" name="contactEmail" class="form-control" placeholder="Enter Email">
+	                                        		</td>
+		                                            <td>
+	                                            		<input id="contactFax" name="contactFax" class="form-control" placeholder="Enter Fax">
+	                                        		</td>
+	                                                <td>
+	                                            		<input id="contactPhone" name="contactPhone" class="form-control" placeholder="Enter Phone">
+	                                            	</td>
 		                                        </tr>	                                    
 		                                    </tbody>
 		                                </table>

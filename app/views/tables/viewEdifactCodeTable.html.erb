@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tables</title>
+    <!-- Core CSS - Include with every page -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	 <script>
+	  $(document).ready(function(){
+	  $("#addEntry").click(function () {
+	  	document.getElementById('viewEntryFields').style.display = "block";
+});
+});
+  </script>
+   </head>
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tables</h1>
+                </div>
+                <!--End Page Header -->
+            </div>
+	    <!--Table-->
+	            <div class="panel panel-primary">
+	                <div class="panel-heading">
+	                    <i class="fa fa-bar-chart-o fa-fw"></i>Edifact Code
+	                </div>
+
+	                <div class="panel-body">
+	                    <div class="row">
+	                        <div class="col-lg-12">
+	                            <div class="table-responsive">
+	                                <table class="table table-bordered table-hover table-striped">
+	                                    <thead>
+	                                        <tr>
+	                                            <th>Code Id</th>
+	                                            <th>Identifiant</th>
+	                                            <th>Qualifiant</th>
+	                                            <th>Routing Address</th>
+	                                            <th>Syntax Level</th>
+	                                            <th>Syntax Version</th>
+	                                            <th>Una Seg</th>
+	                                            <th>Una Seg Value</th>
+	                                            <th>Test Indic</th>
+	                                            <th>Partner Id</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                    	<% @edifact_code_table.each do |edifact| %>
+	                                        <tr>
+	                                            <td><%= edifact.code_id %></td>
+	                                            <td><%= edifact.edifact_identifiant %></td>
+                                                <td><%= edifact.edifact_qualifiant %></td> 
+                                                <td><%= edifact.edifact_routing_adrs %></td>
+	                                            <td><%= edifact.edifact_syntax_level %></td>
+                                                <td><%= edifact.edifact_syntax_version %></td> 
+                                                <td><%= edifact.edifact_una_seg %></td>
+	                                            <td><%= edifact.edifact_una_seg_value %></td>
+                                                <td><%= edifact.edifact_test_indic %></td>  
+                                                <td><%= edifact.partner_id %></td> 
+	                                        </tr>	
+	                                        <% end %>                                       
+	                                    </tbody>
+	                                </table>
+	                            </div>
+	                            <div>
+	                             	<button id="addEntry" type="button" class="btn btn-primary">Add New Entry</button>
+	                            </div>
+	                            <br>
+	                             <div id="viewEntryFields" style="display:none;" class="table-responsive">
+	                             	<form role="form" action="createNewEdifactCode">
+		                                <table class="table table-bordered table-hover table-striped">
+		                                    <tbody>
+		                                        <tr>
+		                                            <td>
+	                                            		<input id="codeId" name="codeId" class="form-control" placeholder="Enter Code Id">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="identifiant" name="identifiant" class="form-control" placeholder="Enter Identifiant">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="qualifiant" name="qualifiant" class="form-control" placeholder="Enter Qualifiant">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="routingAdrs" name="routingAdrs" class="form-control" placeholder="Enter Routing Address">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="syntaxLevel" name="syntaxLevel" class="form-control" placeholder="Enter Syntax Level">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="syntaxVersion" name="syntaxVersion" class="form-control" placeholder="Enter Syntax Version">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="unaSeg" name="unaSeg" class="form-control" placeholder="Enter Una Seg">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="unaSegValue" name="unaSegValue" class="form-control" placeholder="Enter Una Seg Value">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="testIndic" name="testIndic" class="form-control" placeholder="Enter Test Indic">
+	                                        		</td>
+	                                        		<td>
+	                                            		<input id="partnerId" name="partnerId" class="form-control" placeholder="Enter Partner Id">
+	                                        		</td>
+		                                        </tr>	                                    
+		                                    </tbody>
+		                                </table>
+		                                <input id="saveEntry" value="Save" type="Submit" class="btn btn-success"></input>
+	                            	</form>
+	                            </div>
+	                            
+
+	                        </div>
+
+	                    </div>
+	                    <!-- /.row -->
+	                </div>
+	                <!-- /.panel-body -->
+	            </div>
+	            <!--End of Table-->
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+</body>
+
+</html>
