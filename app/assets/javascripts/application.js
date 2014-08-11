@@ -13,15 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap
-//= require flot-demo
-//= require morris-demo
 //= require siminta
-//= require dashboard-demo
 //= require dashboard
 //= require pace
 //= require morris
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
 //= require jquery-1.10.2
+//= require metismenu.min
+//= require bootstrap.min
+//= require_tree .
+

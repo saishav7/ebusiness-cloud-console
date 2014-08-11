@@ -18,7 +18,7 @@ $(function () {
         .popover()
     ///calling side menu
 
-    $('#side-menu').metisMenu();
+    $("#side-menu").metisMenu();
 
     ///pace function for showing progress
 
