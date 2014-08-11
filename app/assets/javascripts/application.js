@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.min
 //= require turbolinks
 //= require bootstrap
 //= require siminta
@@ -21,7 +20,8 @@
 //= require morris
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
-//= require metismenu.min
+//= require jquery.min
 //= require bootstrap.min
+//= require metismenu.min
 //= require_tree .
 
