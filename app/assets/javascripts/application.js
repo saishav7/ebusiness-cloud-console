@@ -20,7 +20,6 @@
 //= require morris
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
-//= require jquery-1.10.2
 //= require metismenu.min
 //= require bootstrap.min
 //= require_tree .
