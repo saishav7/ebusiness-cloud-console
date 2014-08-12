@@ -30,6 +30,5 @@
 //= require jquery.flot.pie
 //= require jquery.flot.resize
 //= require jquery.flot.tooltip.min
-//= require jquery.min
 //= require_tree .
 
