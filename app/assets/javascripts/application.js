@@ -9,18 +9,18 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
 //= require siminta
 //= require dashboard
+//= require dashboard-demo
 //= require pace
 //= require morris
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
 //= require metismenu.min
-//= require bootstrap.min
 //= require_tree .
 
