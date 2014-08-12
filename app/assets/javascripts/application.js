@@ -22,5 +22,14 @@
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
 //= require metismenu.min
+//= require bootstrap.min
+//= require dataTables.bootstrap
+//= require excanvas.min
+//= require jquery.dataTables
+//= require jquery.flot
+//= require jquery.flot.pie
+//= require jquery.flot.resize
+//= require jquery.flot.tooltip.min
+//= require jquery.min
 //= require_tree .
 
