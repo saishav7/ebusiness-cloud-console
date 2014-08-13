@@ -22,7 +22,6 @@
 //= require raphael-2.1.0.min
 //= require jquery.metisMenu
 //= require metismenu.min
-//= require bootstrap.min
 //= require dataTables.bootstrap
 //= require excanvas.min
 //= require jquery.dataTables
