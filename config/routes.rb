@@ -1,4 +1,7 @@
 Myapp::Application.routes.draw do
+  get "messages/message"
+  get "messages/viewMessages"
+  get "messages/messagesByDate"
   get "tables/createNewEdifactCode"
   get "tables/viewEdifactCodeTable"
   get "tables/createNewSenderReceiverContact"
