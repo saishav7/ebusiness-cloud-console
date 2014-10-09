@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tables</title>
+</head>
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tables</h1>
+                </div>
+                <!--End Page Header -->
+            </div>
+	    <!--Table-->
+	            <div class="panel panel-primary">
+	                <div class="panel-heading">
+	                    <i class="fa fa-bar-chart-o fa-fw"></i>Message
+	                </div>
+	                <div class="panel-body">
+	                    <div class="row">
+	                        <div class="col-lg-12">
+	                            <div class="table-responsive" style="overflow:scroll;">
+	                                <table class="table table-bordered table-hover table-striped">
+	                                    <thead>
+	                                        <tr>
+	                                            <th>Id</th>
+	                                            <th>Message Direction</th>
+	                                            <th>Message URL</th>
+	                                        </tr>
+	                                    </thead>
+	                                    <tbody>
+	                                        <tr>
+	                                            <td><%= @message.msg_id %></td>
+	                                            <td><%= @message.msg_direction %></td>
+                                              	<td><%= @message.msg_url %></td>
+	                                        </tr>	
+	                                    </tbody>
+	                                </table>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- /.row -->
+	                </div>
+	                <!-- /.panel-body -->
+	            </div>
+	            <!--End of Table-->
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+</body>
+
+</html>
